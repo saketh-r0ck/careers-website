@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <script src="js/userprofile.js" defer></script>
+</head>
+
+<body>
+  <nav id="webnavbar" class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex w-50 justify-content-center">
+        <img src="images/HelpinghandLogo.png" alt="Logo" style="height: 100px;">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+        <ul class="navbar-nav w-100 justify-content-center">
+          <li class="nav-item ">
+            <a class="nav-link " href="userpage">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aboutlink" href="about_us">About Us</a>
+          </li>
+          
+
+          <li class="nav-item ">
+            <a class="nav-link " href="contact_us">Contact Us</a>
+          </li>
+          <%if(user == "Login"){%>
+            <li class="nav-item">
+            <a class="nav-link" href="signup" >Sign up</a>
+          <%}%>
+            
+        </li>
+          <li class="nav-item ">
+            <a class="nav-link username active" href="userProfile">
+              <%=user%>
+            </a>
+          </li>
+         
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="box">
+
+
+
+    <!-- User Information and Previous Applications -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- Previous Applications -->
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h2>My Applications</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Application Date</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <%for(let i=0;i<userapplist.length;i++){%>
+                    <tr>
+                      <td>
+                        <%=userapplist[i].Job_Title%>
+                      </td>
+                      <td >
+                        <%=userapplist[i].Company%>
+                      </td>
+                      <td>
+                        <%=userapplist[i].Applied_date%>
+                      </td>
+                      
+                    </tr>
+                    <%}%>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- User Information -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <!--<div class="col-md-4 mb-4" style="display: flex; justify-content: center;">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile Picture"
+                  class="img-thumbnail">
+              </div>-->
+              <h2>User Information</h2>
+              <p>Name: <%=name%>
+              </p>
+              <p>Gender: <%=gender%>
+              </p>
+              <p>Email: <%=email%>
+              </p>
+              <p>Phone: <%=phone%>
+              </p>
+              <p>Resume:<embed href="<%=resume%>"></embed></p>
+              
+              <a href="" class="btn btn-primary mr-3">Update Resume</a>
+              <a href="/" class="btn btn-primary mr-3">Logout</a>
+              <!--<a href="/DeleteAccount/<%=user%>" class="btn btn-danger m-3">Delete Account</a>-->
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+   <!-- ======= Footer ======= -->
+   <%- include("userfooter") -%>
+   <!-- End  Footer -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

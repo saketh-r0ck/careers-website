@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/*  section-1  navbar   */ 
+.section1{
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(17,187,251);
+}
+.section1 h1{
+    font-size: 2.5rem;
+    padding: 0 2rem; 
+    color: rgb(17,187,251);
+}
+
+.section1 .userlogo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.section1 .userlogo p{
+    font-size: 2rem;
+    padding: 5px 10px;
+}
+.section1 .userlogo img{
+    height: 75px;
+}
+
+.section2{
+    display: flex;
+}
+
+/* seciton-2 categery */ 
+
+.section2 .category{
+    background-color: black;
+    width: 20%;
+    min-height: 626px;
+}
+.section2 .category .categoryblocks{
+    margin: 10px 0;
+    border-bottom: 2px solid rgb(17,187,251);
+}
+.section2 .categoryr p:hover{
+    color: rgb(17,187,251);
+}
+
+.section2 .category p{
+    text-align: left;
+    font-size: 1.25rem;
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.section2 .category .active p{
+    color: rgb(17,187,251);
+}
+
+.section2 .category a{
+    text-decoration: none;
+}
+
+/* Section-2 container  */
+
+.section2 .container{
+    background-color: whitesmoke;
+    /*height: 644px;
+    */width: 80%;
+}
+
+/*  section-2 container  Manage JOb posts      */
+.section2 .container .operationbtns{
+    height: 106px;
+    display: flex;
+    justify-content: end;
+    border-bottom: 1px solid;
+}
+.section2 .container .operationbtns .operationbtnsdiv{
+    width: 300px;
+    height: 100%;
+    text-align: center;   
+}
+
+.section2 .container .operationbtns button{
+    width: 100px;
+    padding: 10px 15px;
+    margin: 30px 10px;
+    font-weight: 700;
+}
+
+.section2 .container .operationbtns .count{
+    width: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.section2 .container .jobslist{
+    margin : 20px auto;
+}
+
+.section2 .container .jobslist .list{
+    font-size: 1.25rem;
+    border: 1px solid black;
+    
+}
+
+.section2 .container .jobslist .list button{
+    border: 0;
+}
+
+.section2 .container .jobslist .drop_down{
+    
+    margin:  0 auto 5px; 
+    border: 1px solid black; 
+    padding: 10px 0 0 0;   
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 36px -28px inset;
+    display: none;
+}
+
+
+
+.section2 .container .jobslist .drop_down .details1{
+    display: flex;
+}
+.section2 .container .jobslist .drop_down .details1 p{
+    margin:5px 25px 5px 0;
+    padding: 0 10px;
+    
+ }
+
+.section2 .container .jobslist .drop_down .details1 span{
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.section2 .container .jobslist .drop_down .details2 p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    
+}
+
+.section2 .container .jobslist .drop_down .details2 span{
+    font-weight: 600;
+    margin-right: 5px;
+}
+

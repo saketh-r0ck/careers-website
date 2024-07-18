@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">   
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+    <section class="section">
+        <div class="loginbox">
+            <div class="heading"><h1 >Login</h1></div>
+            
+            <div class="forms">
+                <form id="login-form" action="" method=""  onsubmit="return validateForm()">
+                    <p><%=message%></p>
+                    <div id="error-message" style="text-align: center; font-weight: bold; font-size: large;"></div>
+
+                    <label for="email">Email :</label>
+                    <input class="inputs" type="text" id="email" name="email" required  placeholder="Enter your email" >
+                    <label for="password">Password :</label>
+                    <input class="inputs" type="password"  id="password" name="password" required placeholder="Enter your Password" >
+                    Don't have account ? <a href="signup">Sign up</a>
+                    <input  type="submit" name="submit" class="submitbtn inputsubmit mb-2">
+                </form>
+        
+            </div>
+        </div>
+    </section>
+</body>
+</html>

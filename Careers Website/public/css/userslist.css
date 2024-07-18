@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/*  section-1  navbar   */ 
+.section1{
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(17,187,251);
+
+}
+.section1 h1{
+    font-size: 2.5rem;
+    padding: 0 2rem; 
+    color: rgb(17,187,251);
+}
+
+.section1 .userlogo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.section1 .userlogo p{
+    font-size: 2rem;
+    padding: 5px 10px;
+}
+.section1 .userlogo img{
+    height: 75px;
+}
+
+.section2{
+    display: flex;
+}
+
+/* seciton-2 categery */ 
+
+.section2 .category{
+    background-color: black;
+    min-height: 626px;
+    width: 20%;
+}
+.section2 .category .categoryblocks{
+    margin: 10px 0;
+    border-bottom: 2px solid rgb(17,187,251);
+}
+.section2 .categoryr p:hover{
+    color: rgb(17,187,251);
+}
+
+.section2 .category p{
+    text-align: left;
+    font-size: 1.25rem;
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.section2 .category .active p{
+    color: rgb(17,187,251);
+}
+
+.section2 .category a{
+    text-decoration: none;
+}
+
+/* Section-2 container  */
+
+.section2 .container{
+    background-color: whitesmoke;
+    /*height: 644px;
+    */width: 80%;
+}
+
+/*  section-2 container  Manage JOb posts      */
+.section2 .container .operationbtns{
+    height: 106px;
+    display: flex;
+    justify-content: end;
+    border-bottom: 1px solid;
+}
+.section2 .container .operationbtns .operationbtnsdiv{
+    width: 300px;
+    height: 100%;
+    text-align: center;   
+}
+
+.section2 .container .operationbtns button{
+    width: 100px;
+    padding: 10px 15px;
+    margin: 30px 10px;
+    font-weight: 700;
+}
+
+.section2 .container .operationbtns .count{
+    width: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+
+.section2 .container table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.section2 .container table tr{
+    border-bottom: 1px solid;
+}
+
+.section2 .container table thead th{
+    font-size: 1.25rem;
+    padding: 1rem 10px;
+    text-align: center;
+}
+.section2 .container table td{
+    font-size: 1.25rem;
+    padding: 1rem 10px;
+    text-align: center;
+}
+.section2 .container table .tablebtns{
+    width: 150px;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.section2 .container table .tablebtns button{
+    width: 100px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.section2 .container .jobslist table{
+    margin-top: 20px;
+}

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TS JOBS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/description.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  
+  </head>
+  <body>
+    <nav id="webnavbar" class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+      <div class="container-fluid">
+          <div class="navbar-brand d-flex w-50 justify-content-center">
+              <img src="images/HelpinghandLogo.png" alt="Logo" style="height: 100px;">
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+              <ul class="navbar-nav w-100 justify-content-center">
+                  <li class="nav-item ">
+                      <a class="nav-link active "  href="">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link aboutlink" href="about_us">About Us</a>
+                  </li>    
+                  
+                  
+                  <li class="nav-item ">
+                      <a class="nav-link " href="contact_us">Contact Us</a>
+                  </li>
+                  
+                  <%if(user == "Login"){%>
+                    <li class="nav-item">
+                    <a class="nav-link" href="signup" >Sign up</a>
+                  <%}%>
+                    
+
+                  <li class="nav-item ">
+                      <a class="nav-link username" 
+                      <%if(user == "Login"){%>
+                        href="login.html"
+                      <%}else{%>
+                        href="userProfile"
+                      <%}%>
+                      ><%=user%></a>
+                  </li>
+                  
+              </ul>
+          </div>
+      </div>
+    </nav>
+   
+    <div class="box">
+        <div class=" bg-overlay" style="background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('images/about.jpg');">
+            <div class="row m-5 text-center">
+                <h1>Opportunities don't happen, you create them</h1>
+                
+            </div>
+        </div>
+    <div class="m-5">  
+    <div><h1 style="text-align: center;"><%= jobdetails.Title %></h1></div>
+    
+      <div class="row applyflex">
+        <div class="col-8 ">
+          <h5>Company Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<%= jobdetails.Company %></h5>
+          <h5 class="">Employment Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<%= jobdetails.Employment_Type %></h5>
+          <h5 class="">Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;<%= jobdetails.Location %></h5>
+        </div>
+        
+      </div>
+    
+    <div>
+        <h3>Job description</h3>
+        <%for(let k=0;k<description.length;k++){%>
+          <p><%= description[k] %></p>
+        <%}%>
+    </div>
+    <p style="color: red;text-align: center;"><%=dMessage%></p>
+    
+    <div class="d-flex justify-content-center applybtn">
+      <form action=
+      <%if(user == "Login"){%>
+        "login"
+      <%}else{%>
+        "/description"
+      <%}%>
+      method="post">
+      <button name="job_id" value="<%= jobdetails.Job_id%>" style="border-color:#34dbff;cursor:pointer;width:180px;height:45px;background-color:white;color:#6673b0;letter-spacing :3px; border-radius: 9PX;"><h4>APPLY NOW</h4></button>
+      </form>
+   
+    </div>
+    
+  <div>
+        
+  </div>
+   
+  </div> 
+    <!-- ======= Footer ======= -->
+<footer id="footer" >
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 footer-info">
+          <p id ="three">TS JOBS</p>
+          <p></p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-links ">
+          <h4>Navigation</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a style="text-decoration: none;" href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a style="text-decoration: none;"href="careers.html">Careers</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a style="text-decoration: none;"href="about.html">About</a></li>
+          
+          </ul>
+        </div>
+
+     
+
+        <div class="col-lg-4 col-md-6 footer-contact ">
+          <a href="contact.html" style="text-decoration: none;"><h4>Contact Us</h4></a>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="skype"><i class="fa fa-skype"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container ">
+    <div class="copyright py-4">
+      &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+    </div>
+    
+  </div>
+</footer><!-- End  Footer -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+
+    </script>
+  </body>
+</html>

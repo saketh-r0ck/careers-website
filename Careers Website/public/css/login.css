@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    background-color: #cef0ff;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    height: 752px;
+}
+
+.loginbox{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: rgb(17,187,251);
+    background: linear-gradient(90deg, rgba(17,187,251,1) 37%, rgba(0,212,255,1) 57%);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+h1{
+    margin: 0;
+    padding: 30px;
+    color: black;
+}
+
+.forms{
+    width: 400px;
+    margin: auto;
+}
+form{
+    width: 80%;
+    margin:  20px auto;
+    background-color: white;
+    
+    justify-content: center;
+}
+
+form p{
+    color: red;
+}
+form label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+form .inputs{
+    width: 95%;
+    height: 40px;
+    margin: 15px 0px;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-left: 13px;
+}
+
+form .inputsubmit{
+    width: 100%;
+    height: 40px;
+    margin: 15px 0px;
+    border-radius: 10px;
+    font-size: 16px;
+    
+}
+.submitbtn{
+    background: rgb(17,187,251);
+    background: linear-gradient(90deg, rgba(17,187,251,1) 37%, rgba(0,212,255,1) 57%);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+}
+
+.submitbtn:hover{
+    border: 2px solid black;
+    background: white;
+}
+
+a{
+    border-bottom: 1px ;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+
+

@@ -1,0 +1,55 @@
+<%- include("header") -%>
+
+        <div class="container">
+            <div class="operationbtns ">
+                <div class="container-fluid d-flex justify-content-around"  >
+                    <form class="d-flex mx-4 col-sm-4 col-md-6 col-lg-5 m-auto  align-items-center" action="/jobslistsearch" method="post" role="jobssearch ">
+                      <input class="form-control mx-2  border-dark border-2 h-75 "name="jkey" type="search" placeholder="Search By Job Title or Company Name" aria-label="Search">
+                      <button class="btn btn-outline-success  border-dark border-1" type="submit">Search</button>
+                    </form>
+                    <div class="col-lg-2 d-flex align-items-center justify-content-center">
+                        <div class="count h-50" >
+                            <h5 class="">Count :</h5>
+                            <h5 class="p-1"><%=jlist.length%></h5>
+                        </div>
+                    </div>
+                    <div class="operationbtnsdiv col-lg-3">
+                        <a href="manageJobs"><button >ADD</button></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="jobslist">
+                <%for(let i=0;i<jlist.length;i++){ %>
+                    <div class="container">
+                        <div class="row list mx-0">
+                            <!--<div class="col-2 p-3"><%=jlist[i].Job_id%></div>-->
+                            
+                            <div class="col-3 p-3"><%=jlist[i].Title%></div>
+                            <div class="col-3 p-3"><%=jlist[i].Company%></div>
+                            <div class="col-3 p-3"><%=jlist[i].Posted_Date%></div>
+                            <button class="down_btn col-1 p-3"><i class="fa-solid fa-angle-down"></i> </button>
+                            <form action="/editjob1" method="post" class=" col-1 p-3" > <button type="submit" name="job_editid" value="<%=jlist[i].Job_id%>" class="edit_btn "><i class="fas fa-edit"></i> </button></form> 
+                            <form action="/deletejob" method="post" class="col-1 p-3" id="deletejob"><button type="submit" name="job_deleteid"  value="<%=jlist[i].Job_id%>" class="delete_btn"><i class="fa fa-trash" aria-hidden="true"></i> </button></form>
+                            
+                        </div>
+                        <div class="drop_down">
+                    
+                            <div class="details1">
+                                <p><span>Job category: </span><%=jlist[i].Category%></p>
+                                <p><span>Employment Type: </span><%=jlist[i].Employment_Type%></p>
+                                <p><span>Location : </span><%=jlist[i].Location%></p>
+                            </div>
+                            
+                            <div class="details2">
+                                <p><span>Job Description :</span><%=jlist[i].Job_Description%></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                <%}%>                
+            </div>
+        </div>
+ 
+<%- include("footer") -%>

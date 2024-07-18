@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Pannel</title>
+    <link rel="stylesheet" href="css/userslist.css">
+    <link rel="stylesheet" href="css/appilications.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="js/appilications.js" defer></script>
+</head>
+<body>
+    <div class="section1">
+        <div class="navtext">
+            <h1 >Admin Panel</h1>
+        </div>
+        <div class="userlogo">
+            <p><%=admuname%></p>
+            <img src="images/Profile image.jpeg" alt="">
+        </div>
+    </div>
+    <div class="section2">
+        <div class="category">
+            
+            <div class="categoryblocks"><a href="adminIndex.html"><p>Jobs List</p></a></div>
+            <div class="categoryblocks"><a href="manageJobs"><p>Manage Job</p></a></div>  
+            <%if(admtype == 'superadmin'){%>
+                <div class="categoryblocks active"><a href="applications.html"><p>Applications</p></a></div>
+                <div class="categoryblocks"><a href="usersList.html"><p>Users List</p></a></div>
+            <%}%>
+        </div>
+        <div class="container">
+            <div class="operationbtns ">
+                <div class="container-fluid d-flex justify-content-around"  >
+                    <form class="d-flex ml-4 col-sm-4 col-md-6 col-lg-7  align-items-center" action="/appslistsearch" method="post" role="jobssearch ">
+                      <input class="form-control  border-dark border-2"name="akey" type="search" placeholder="Search By Name or Phone Number or Company or Job Title" aria-label="Search">
+                      <button class="btn btn-outline-success  border-dark border-1" type="submit">Search</button>
+                    </form>
+                    <div class="col-lg-2 d-flex align-items-center justify-content-center ">
+                        <div class="count h-50" >
+                            <h5 class="">Count :</h5>
+                            <h5 class="p-1"><%=applist.length%></h5>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="applist">
+                <div class="header">
+                    <div class="row details ">
+                        <div class="col-1">Job Id</div>
+                        <div class="col-3">Full Name</div>
+                        <div class="col-2">Company</div>
+                        <div class="col-4">Job Title</div>
+                        
+                        <div class="col-2">Resume</div>
+                        
+                    </div>
+                </div>
+
+                <%for(let i=0;i<applist.length;i++){%>
+                    <div class="application">
+                        <form action="/applications" method="post">
+                        <div class="row details">
+                            
+                            <div class="col-3"><%=applist[i].Name %></div>
+                            <div class="col-3"><%=applist[i].Company%></div>
+                            <div class="col-4"><%=applist[i].Job_Title %></div>
+                            <div class="col-2"><a href="<%=applist[i].Resume_Path%>" target="_blank">Resume</a></div>
+                            
+                        </div>
+                        <div class="row contact">
+                            <div class="col-2">Contact Details:-</div>
+                            <div class="col-5"><span>Email : </span><%=applist[i].Email %></div>
+                            <div class="col-3"><span>Phone : </span><%= applist[i].Phone %></div>
+                            <input type="hidden" name="job_id" value="<%=applist[i].Job_id%>">
+                            <input type="hidden" name="user_name" value="<%=applist[i].Username%>">
+                            
+                        </div>
+                    </form>
+                    </div>
+                <%}%>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

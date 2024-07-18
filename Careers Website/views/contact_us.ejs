@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/form.css">
+  <style>
+    body {
+      background-color: #F5F5F5;
+    }
+
+    .jumbotron {
+      background-color: #0077B5;
+      color: black;
+    }
+
+    h1 {
+      font-weight: bold;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+    }
+
+    .contact-info {
+      background-color: #FFF;
+      padding: 50px;
+      margin-bottom: 50px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-info h2 {
+      margin-bottom: 30px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 10px;
+    }
+
+    /* new */
+    /*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+    #contact {
+      padding: 60px 0;
+    }
+
+    #contact .contact-info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #contact .contact-info i {
+      font-size: 48px;
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #f82249;
+    }
+
+    #contact .contact-info address,
+    #contact .contact-info p {
+      margin-bottom: 0;
+      color: #112363;
+    }
+
+    #contact .contact-info h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #112363;
+    }
+
+    #contact .contact-info a {
+      color: #4869df;
+    }
+
+    #contact .contact-info a:hover {
+      color: #f82249;
+    }
+
+    #contact .contact-address,
+    #contact .contact-phone,
+    #contact .contact-email {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+
+      #contact .contact-address,
+      #contact .contact-phone,
+      #contact .contact-email {
+        padding: 20px 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #contact .contact-phone {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="webnavbar" class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex w-50 justify-content-center">
+        <img src="images/HelpinghandLogo.png" alt="Logo" style="height: 100px;">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+        <ul class="navbar-nav w-100 justify-content-center">
+          <li class="nav-item ">
+            <a class="nav-link " href="userpage">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aboutlink" href="about_us">About Us</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link active" href="contact_Us">Contact Us</a>
+          </li>
+          
+          <%if(user == "Login"){%>
+            <li class="nav-item">
+            <a class="nav-link" href="signup" >Sign up</a>
+          <%}%>
+            
+
+          <li class="nav-item ">
+            <a class="nav-link username" href="userProfile">
+              <%=user%>
+            </a>
+          </li>
+          
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="box">
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Contact Us</h1>
+        <p class="lead">Have a question or comment for us? We're here to help.</p>
+      </div>
+    </div>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg reveal">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row contact-info">
+
+          <div class="col-md-4 reveal">
+            <div class="contact-address">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <h3>Address</h3>
+              <address>Old aerodrome, Near Kondroprolu
+                Tadepalligudem
+                Andhra Pradesh </address>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal">
+            <div class="contact-phone">
+              <i class="fa fa-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+919059141009">+91 905914109</a></p>
+              <p><a href="tel:+919390752201">+91 9390752201</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal">
+            <div class="contact-email">
+              <i class="fa fa-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:saisaketh5022@gmail.com">saisaketh5022@gmail.com</a></p>
+              <p><a href="mailto:burlisaitharun2401@gmail.com">burlisaitharun2401@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section><!-- End Contact Section -->
+    <div class="container-fluid pb-5 reveal" style="
+    background: url('images/contactpage.jpg');
+    height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    ">
+      <div class="container w-lg-50 mb-5">
+        <form class="row g-3 p-5 d-flex justify-content-center " style="border-radius: 20px;" id="career"
+          action="mailto:420118@student.nitandhra.ac.in" method="post" enctype="text/plain">
+          <div class="col-md-7 fw-bolder">
+            <label for="inputEmail4" class="form-label " style="color: white;"> Name</label>
+            <input style="border: 1px solid black; " type="text" name="Name : " class="form-control" id="inputEmail4"
+              placeholder="Enter Your Name" required />
+          </div>
+
+          <div class="mb-3 col-md-7 d-block fw-bolder">
+            <label for="formGroupExampleInput" class="form-label" style="color: white;">Email</label>
+            <input style="border: 1px solid black;" type="email" name="Email : " class="form-control"
+              id="formGroupExampleInput" placeholder="Enter Your Email" required />
+          </div>
+          <div class="col-md-7 fw-bolder">
+            <label for="inputAddress2" class="form-label" style="color: white;">Subject</label>
+            <input style="border: 1px solid black;" type="text" name="Subject : " class="form-control"
+              id="inputAddress2" placeholder="Enter the Subject" />
+          </div>
+          <div class="col-lg-7  fw-bolder">
+            <div class="form-group">
+              <label style="color: white;">Query</label>
+              <textarea class="form-control my-2" placeholder="Enter your Query" name="Query : " rows="3" style="border: 1px solid black;"></textarea>
+            </div>
+          </div>
+          <div class="mb-3 col-lg-6 my-4 ">
+            <input class="btn btn-secondary px-5 " type="submit" value="SUBMIT" ></input>
+          </div>
+
+        </form>
+      </div>
+    </div>
+   <!-- ======= Footer ======= -->
+   <%- include("userfooter") -%>
+   <!-- End  Footer -->
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

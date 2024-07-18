@@ -1,0 +1,40 @@
+.section2 .container .applist{
+    width: 85%;
+    margin: 20px auto;
+    font-size: 1.15rem;
+    border: 2px solid black;
+    padding: 0 10px;
+}
+
+.section2 .container .applist .application{
+    margin: auto;
+}
+.section2 .container .applist .header{
+    padding: 15px 15px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+
+.section2 .container .applist .application{
+    border-bottom: 1px solid black;    
+
+}
+.section2 .container .applist .application .details{
+    padding: 15px 15px;
+    
+}
+
+.section2 .container .applist .application .contact{
+    display: none;
+    
+    border-top:none;
+    padding: 0px 15px 15px;
+}
+
+.section2 .container .operationbtns .count{
+    width: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}

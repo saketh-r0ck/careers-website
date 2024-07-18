@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Careers Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  
+  
+  </head>
+  <body>
+    <nav id="webnavbar" class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+      <div class="container-fluid">
+          <div class="navbar-brand d-flex w-50 justify-content-center">
+            <img src="images/HelpinghandLogo.png" alt="Logo" style="height: 100px;">
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+              <ul class="navbar-nav w-100 justify-content-center">
+                  <li class="nav-item ">
+                      <a class="nav-link active"  href="">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link aboutlink" href="about_us">About Us</a>
+                  </li>    
+                  
+                  <li class="nav-item ">
+                      <a class="nav-link " href="contact_us">Contact Us</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link " href="signup">Sign Up</a>
+                  </li>
+                  <li class="nav-item ">
+                      <a class="nav-link " href="login.html">
+                        Login
+                      </a>
+                  </li>
+                  
+              </ul>
+          </div>
+      </div>
+    </nav>
+    
+    <div class="box">
+      <div class="container-fluid mt-5"  >
+        <form class="d-flex col-sm-4 col-md-6 col-lg-8 m-auto" action="/search" method="post" role="search ">
+          <input class="form-control mx-2  border-dark border-2 "name="key" type="search" placeholder="Job Name" aria-label="Search">
+          <button class="btn btn-outline-success  border-dark border-1" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="container " data-aos="fade-up">
+        <form action="/" method="post" >
+        <div class="row mb-5 d-flex justify-content-center" >
+          <% if (userslist.length === 0) { %>
+            <p><%=searchMessage%></p>
+          <% } else { %>
+            <% for(let i=0;i<userslist.length;i++){%>
+            <div class="d-md-flex post-entry-2 half mt-5 reveal w-75" style="box-shadow:  6px 6px  7px; border: 3px solid aqua; border-radius: 8px;">
+              <!--<a href="#" class="me-4 thumbnail order-2">
+                  <img  width="200" height="350" src="images/job image.png"  class="img-fluid mt-5" >
+              </a>-->
+              <div class="pe-md-5 mt-4 mt-md-0 w-100">
+                  <div class="post-meta mt-4 ">CURRENT OPENINGS</div>
+                  <h2 class="mb-2 display-4  fs-1" style="font-weight: 600;"><%= userslist[i].Title %></h2>
+                <div id ="sal"><p>Company: <%=userslist[i].Company%>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Category: <%=userslist[i].Category%> &nbsp;&nbsp;&nbsp;&nbsp;</p><p>Location: <%= userslist[i].Location%>&nbsp;&nbsp;&nbsp;&nbsp;</p></div> 
+                <p class="card-body" style="max-width: 900px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;"><%=userslist[i].Job_Description%></p>
+                <button type="submit" name="job" value="<%= userslist[i].Job_id %>"style="border-color:#34dbff;cursor:pointer;width:180px;height:45px;background-color:white;color:#6673b0;letter-spacing :3px; border-radius: 9PX;"><h4>APPLY NOW</h4></button>
+              <br>
+              <br>
+                </div>
+              </div>
+            <%}%>
+
+        <%}%>
+      
+      </form>
+      </div>
+
+    </div>
+     <!-- ======= Footer ======= -->
+    <%- include("userfooter") -%>
+    <!-- End  Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/* section 3 */
+
+.section2 .container .section3{
+    width: 80%;
+    margin: auto;
+}
+
+.section2 .container .section3 .headbox{
+    display: flex;
+    justify-content: space-between;
+}
+.section2 .container .section3 .headbox h2{
+    padding: 5px 10px;
+    margin-left: 20px;
+    
+}
+.section2 .container .section3 .headbox button{
+    padding: 10px 20px ;
+    height: 100px;
+}
+
+.section2 .container .section3 form{
+    margin: 20px;
+}
+
+.section2 .container .section3 .forminputs{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.section2 .container .section3 .forminputs label{
+    font-size: 1.25rem;
+    width: 250px;
+    padding: 5px 10px;
+}
+.section2 .container .section3 .forminputs span{
+    font-size: 1.5rem;
+}
+
+
+.section2 .container .section3 .forminputs select{
+   
+    height: 40px;
+    padding: 5px 10px;
+    margin: 0 20px; 
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section2 .container .section3 .forminputs select-items{
+    border-bottom: 2px solid black;
+}
+
+.section2 .container .section3 .forminputs input{
+    height: 35px;
+    padding: 5px 10px;
+    margin: 0 20px;
+}
+.section2 .container .section3 .forminputs textarea{
+    margin: 5px 20px;
+    resize: both;
+}
+

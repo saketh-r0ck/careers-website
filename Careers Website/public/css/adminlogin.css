@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    
+}
+
+.section{
+    display: flex;
+    align-items: baseline;
+    justify-content:center ;
+    height: 752px;
+}
+
+.loginbox{
+    width: 500px;
+    height: 400px;
+    
+}
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    /*background: rgb(17,187,251);
+    background: linear-gradient(90deg, rgba(17,187,251,1) 37%, rgba(0,212,255,1) 57%);
+    */
+    
+}
+h2{
+    margin: 0;
+    padding: 50px 30px 30px;
+    color: rgb(15,162,217);
+}
+
+.forms{
+    
+    border: 2px solid black; 
+    border-top: 0;
+}
+
+form{
+    width: 80%;
+    margin:  0px auto 20px ;
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+form p{
+    color: red;
+    font-size: 1.25rem;
+}
+
+form label{
+    font-size: 1.25rem;
+    font-weight: 500;   
+}
+form .inputs{
+    width: 60%;
+    height: 40px;
+    margin: 15px 0px;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-left: 13px;
+}
+
+form .btn{
+    text-align: center;
+}
+
+form  button{
+    width: 150px;
+    height: 40px;
+    margin: 15px 0px;   
+    font-size: 16px;
+}
+.submitbtn{
+    background: rgb(17,187,251);
+    background: linear-gradient(90deg, rgba(17,187,251,1) 37%, rgba(0,212,255,1) 57%);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+}
+
+.submitbtn:hover{
+    border: 2px solid black;
+    background: white;
+    color: rgb(15,162,217);
+}
+
+.switch{
+    width: 100%;
+    display: flex;
+   
+}
+
+.switch .adminbtns{
+    width: 50%;
+    height: 75px;
+    font-weight: 500;
+    font-size: 1.75rem;
+    font-family: 'Prata', Arial, sans-serif;
+    
+    background: linear-gradient(90deg, rgba(17,187,251,1) 37%, rgba(0,212,255,1) 57%)
+}
+
+.selected {
+    background: white !important;
+    border-bottom: 0 !important;
+}
+
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="js/signup.js" defer></script>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="heading">
+                <h1>Sign Up</h1>
+            </div>
+            <form id="signupform" action="" method="" enctype="multipart/form-data" onsubmit="return validateForm()"  >     
+                <p style="color: red;"><%=message%></p>  
+                <div id="error-message" style="text-align: center; font-weight: bold; font-size: large; color: red;"></div>
+                
+                <input class="inputs" id="firstname" name="firstname" type="text" placeholder="First Name" >
+                <input class="inputs" id="lastname" name="lastname" type="text" placeholder="Last Name" >   
+            
+
+                <select class="inputs " name="gender" style="width : 69%;
+                border-width: 0.1rem;
+                font-family: Arial, Helvetica, sans-serif;"> 
+                    <option value="#">Gender</option>
+                    <option value="Male">Male</option> 
+                    <option value="Female">Female</option> 
+                </select>
+                
+                <select class="inputs " name="qualification" style="width : 69%;
+                border-width: 0.1rem;
+                font-family: Arial, Helvetica, sans-serif;" > 
+                    <option value="#">Qualification</option>
+                    <option value="B-Tech">B-Tech</option> 
+                    <option value="M-Tech">M-Tech</option> 
+                    <option value="MBA">MBA</option> 
+                </select>
+  
+                <select class="inputs " name="experience" style="width : 69%;
+                border-width: 0.1rem;
+                font-family: Arial, Helvetica, sans-serif;"> 
+                    <option value="#">Experience</option>
+                    <option value="0">0</option> 
+                    <option value="1">1</option> 
+                    <option value="2">2</option> 
+                </select>
+
+                <input class="inputs" id="skills" name="skills" type="text" placeholder="Skills (eg: Java, HR, Digital Marketing ,etc.)"  >
+
+                <input class="inputs" id="phoneno" name="phoneno" type="text" placeholder="Phone Number"  >
+
+                <input class="inputs" id="email" name="email" type="text" placeholder="Email"  >
+                <input class="inputs" id="location" name="location" type="text" placeholder="Location"  >
+                
+                <input class="inputs" id="password" name="password" type="password" placeholder="Password"  >
+                <input class="inputs" id="confirmpassword" name="confirmpassword" type="password" placeholder="Confirm Password"  >
+                <div class=" col-md-7 fw-bolder">
+                <label for="formGroupExampleInput2" class="form-label" style="color: black;">Upload your Resume</label>
+        
+                <input style="border: 1px solid black;" type="file" id="file" name="resume" accept="application/pdf"
+                      class="form-control w-100" title="Upload your resume" required />
+                    <!--<div id="file_error" style="text-align: center; font-weight: bold; font-weight:600;color: red;"></div>
+                    --></div>
+                  Already have an account ? <a href="login.html">Login</a>
+                <div class="submitbutton">
+                    <button type="submit" class="submitbtn1" value="Sign Up" >SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>   
+</body>
+</html>

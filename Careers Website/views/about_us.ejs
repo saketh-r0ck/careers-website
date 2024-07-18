@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+        body {
+            background-color: #F5F5F5;
+        }
+
+        .jumbotron {
+            background-color: #0077B5;
+            color: #FFF;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="webnavbar" class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+        <div class="container-fluid">
+            <div class="navbar-brand d-flex w-50 justify-content-center">
+                <img src="images/HelpinghandLogo.png" alt="Logo" style="height: 100px;">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="userpage">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link aboutlink active" href="about_us">About Us</a>
+                    </li>
+                    
+
+                    <li class="nav-item ">
+                        <a class="nav-link " href="contact_Us">Contact Us</a>
+                    </li>
+                    
+                    <%if(user == "Login"){%>
+                        <li class="nav-item">
+                        <a class="nav-link" href="signup" >Sign up</a>
+                    <%}%>
+                        
+                    <li class="nav-item ">
+                        <a class="nav-link username" href="userProfile">
+                            <%=user%>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="box">
+        <!-- Page Content -->
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <div class="container " style="width:80%">
+                <h1 class="display-4">About Us</h1>
+                <p class="lead">Software Careers is a job board and career resource for professionals in the software
+                    industry. Our mission is to connect job seekers with the best career opportunities, and to provide
+                    them with the resources and tools they need to succeed in their careers.</p>
+            </div>
+        </div>
+
+    <div class="container">
+        
+        <!-- Page Content -->
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-11 mx-auto">
+                    <h2>Our Story</h2>
+                    <p>Software Careers was founded in 2015 by a team of software industry veterans who recognized the
+                        need for a better way to connect job seekers with employers. Over the years, we have grown into
+                        a leading career resource for professionals in the software industry.</p>
+                    <p>Our team is passionate about helping job seekers find their dream job, and helping employers find
+                        top talent. We understand the unique challenges of the industry and are committed to providing
+                        our users with the resources and tools they need to succeed in their careers.</p>
+                    <p>Whether you are a recent graduate, a seasoned professional, or somewhere in between, we are here
+                        to help you take your career to the next level.</p>
+
+                    <h2>Our Services</h2>
+                    <p>At Software Careers, we offer a range of services to help job seekers and employers succeed in
+                        the software industry:</p>
+                    <ul>
+                        <li>Job board with the latest job openings in the industry</li>
+                        <li>Career resources, including resume writing tips and interview advice</li>
+                        <li>Professional networking opportunities</li>
+                        <li>Employer branding services</li>
+                        <li>Recruitment solutions</li>
+                    </ul>
+                    <p>Our goal is to provide our users with the tools and resources they need to achieve their career
+                        goals.</p>
+
+
+                    <p>Thank you for choosing Software Careers. We look forward to helping you achieve your career
+                        goals.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row my-5">
+            <div class="col-md-12">
+                <h2>Our Team</h2>
+            </div>
+            <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3FpxmhxCpk1zV5lYMlbKDffAJiGOYItHGcQPEjNc-NhiwhzSCEg6YS_TqL9Fv8pChpLpb2UV2yCU&usqp=CAU&ec=48600113"
+                    alt="Team member" class="img-fluid rounded-circle my-3">
+                <h3>THARUN</h3>
+                <p>DEVELOPER</p>
+                <p>Tharun is a software industry veteran with over 20 years of experience. He started Software Careers
+                    to help connect job seekers with top employers in the industry.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3FpxmhxCpk1zV5lYMlbKDffAJiGOYItHGcQPEjNc-NhiwhzSCEg6YS_TqL9Fv8pChpLpb2UV2yCU&usqp=CAU&ec=48600113"
+                    alt="Team member" class="img-fluid rounded-circle my-3">
+                <h3>SAKETH</h3>
+                <p>DEVELOPER</p>
+                <p>Saketh is a software industry veteran with over 20 years of experience. He started Software Careers
+                    to help connect job seekers with top employers in the industry.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3FpxmhxCpk1zV5lYMlbKDffAJiGOYItHGcQPEjNc-NhiwhzSCEg6YS_TqL9Fv8pChpLpb2UV2yCU&usqp=CAU&ec=48600113"
+                    alt="Team member" class="img-fluid rounded-circle my-3">
+                <h3>Gireesh</h3>
+                <p>ADVISER</p>
+                <p>Gireesh is a software industry veteran with over 20 years of experience. He started Software Careers
+                    to help connect job seekers with top employers in the industry.</p>
+            </div>
+        </div>
+
+         
+    </div>
+    <!-- ======= Footer ======= -->
+    <%- include("userfooter") -%>
+    <!-- End  Footer -->
+
+</body>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3."></script>
+
+</html>
